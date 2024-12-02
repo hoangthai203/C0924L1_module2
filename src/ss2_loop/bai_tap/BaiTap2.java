@@ -3,24 +3,21 @@ package ss2_loop.bai_tap;
 public class BaiTap2 {
     public static void main(String[] args) {
         int count = 0;
-        int N = 2;
+        int number = 2;
         System.out.println("20 số nguyên tố đầu tiền là: ");
         while (count < 20) {
-            if (isPrime(N)) {
-                System.out.println(N + " ");
+            boolean isPrime = true;
+            for (int i = 2; i <= Math.sqrt(number); i++) {
+                if (number % i == 0) {
+                    isPrime = false;
+                    break;
+                }
+            }
+            if (isPrime) {
+                System.out.println(number);
                 count++;
             }
-            N++;
+            number++;
         }
-    }
-
-    public static boolean isPrime(int n) {
-        if (n < 2)
-            return false;
-        for (int i = 2; i <= Math.sqrt(n); i++) {
-            if (n % i == 0)
-                return false;
-        }
-        return true;
     }
 }
