@@ -1,4 +1,4 @@
-package ss5_static.bai_tap;
+package ss5_static.bai_tap.bai_tap2;
 
 public class Student {
     private String name = "John";

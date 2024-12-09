@@ -1,4 +1,4 @@
-package ss5_static.bai_tap;
+package ss5_static.bai_tap.bai_tap1;
 
 public class TestCircle {
     public static void main(String[] args) {
