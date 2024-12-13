@@ -9,6 +9,7 @@ import java.util.Random;
 
 public class Run {
     public static void main(String[] args) {
+        // Tạo mảng các hình học
         Shape[] shapes = new Shape[3];
         shapes[0] = new Circle(3.0);
         shapes[1] = new Rectangle(2.0, 4.0);
@@ -18,7 +19,13 @@ public class Run {
 
         for (Shape shape : shapes) {
             System.out.println("Before resizing:");
-            System.out.println(shape);
+            if (shape instanceof Circle) {
+                System.out.println("Area: " + ((Circle) shape).getArea());
+            } else if (shape instanceof Rectangle) {
+                System.out.println("Area: " + ((Rectangle) shape).getArea());
+            } else if (shape instanceof Square) {
+                System.out.println("Area: " + ((Square) shape).getArea());
+            }
 
             double percent = 1 + random.nextInt(100);
             System.out.println("Resizing by " + percent + "%");
@@ -28,8 +35,6 @@ public class Run {
             }
 
             System.out.println("After resizing:");
-            System.out.println(shape);
-
             if (shape instanceof Circle) {
                 System.out.println("New area: " + ((Circle) shape).getArea());
             } else if (shape instanceof Rectangle) {
@@ -37,7 +42,6 @@ public class Run {
             } else if (shape instanceof Square) {
                 System.out.println("New area: " + ((Square) shape).getArea());
             }
-
             System.out.println();
         }
     }
