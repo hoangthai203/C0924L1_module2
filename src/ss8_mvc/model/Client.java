@@ -53,7 +53,7 @@ public class Client {
     @Override
     public String toString() {
         return "Client{" +
-                "id=" + id +
+                "id: " + id +
                 ", Tên: '" + name + '\'' +
                 ", Ngày tháng năm sinh: " + birthDate +
                 ", Địa chỉ: '" + address + '\'' +

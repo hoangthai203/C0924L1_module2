@@ -7,7 +7,7 @@ import java.time.format.DateTimeFormatter;
 
 public class ClientService implements IClientService {
 
-    private static Client[] clients = new Client[10];
+    private static final Client[] clients = new Client[10];
     static {
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd/MM/yyyy");
         clients[0] = new Client(1, "Nguyễn Văn A", LocalDate.parse("16/12/2003", formatter), "Đà Nẵng");

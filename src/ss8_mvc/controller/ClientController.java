@@ -15,7 +15,13 @@ public class ClientController {
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd/MM/yyyy");
 
         while (true) {
-            System.out.println("Chọn chức năng \n" + "1. Xem danh sách\n" + "2. Thêm mới\n" + "3. Sửa\n" + "4. Xoá\n" + "5. Thoát");
+            System.out.println("""
+                    Chọn chức năng\s
+                    1. Xem danh sách
+                    2. Thêm mới
+                    3. Sửa
+                    4. Xoá
+                    5. Thoát""");
             int choose = Integer.parseInt(scanner.nextLine());
 
             switch (choose) {
